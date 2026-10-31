@@ -938,3 +938,12 @@ button {
     }
 
 }
+.marca .logo {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 95px !important;
+    height: 95px !important;
+    object-fit: contain;
+    flex-shrink: 0;
+}
