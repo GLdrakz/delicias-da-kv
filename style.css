@@ -1,0 +1,940 @@
+/* =========================================
+   DELÍCIAS DA KV
+   Identidade visual rosa, branco e vinho
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Parisienne&display=swap');
+
+
+/* CORES DO SITE */
+
+:root {
+    --rosa: #ed7899;
+    --rosa-claro: #fff0f4;
+    --rosa-medio: #ffdce6;
+    --rosa-xadrez: #f9d5df;
+
+    --vinho: #8d183d;
+    --vinho-escuro: #6d1230;
+
+    --branco: #ffffff;
+    --texto: #69253b;
+    --texto-suave: #986779;
+
+    --borda: #f2b6c9;
+}
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--texto);
+    background-color: var(--rosa-claro);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* FUNDO XADREZ */
+
+.cabecalho,
+.rodape {
+    background-color: #fff5f7;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent 50%,
+            rgba(245, 170, 190, 0.23) 50%
+        ),
+        linear-gradient(
+            transparent 50%,
+            rgba(245, 170, 190, 0.23) 50%
+        );
+
+    background-size: 28px 28px;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    padding: 12px 6%;
+
+    border-bottom: 1px solid var(--borda);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 72px;
+    height: 72px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+    background-color: white;
+}
+
+.marca-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.marca-texto strong {
+    color: var(--vinho);
+    font-family: 'Parisienne', cursive;
+    font-size: 29px;
+    line-height: 1.2;
+}
+
+.marca-texto small {
+    color: var(--texto-suave);
+    font-size: 11px;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navegacao a {
+    font-size: 14px;
+    font-weight: 800;
+
+    transition: color 0.2s;
+}
+
+.navegacao a:hover {
+    color: var(--rosa);
+}
+
+.botao-cabecalho {
+    flex-shrink: 0;
+}
+
+
+/* BOTÕES */
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 14px 24px;
+
+    border: 1px solid transparent;
+    border-radius: 35px;
+
+    background-color: var(--vinho);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.botao:hover {
+    background-color: var(--vinho-escuro);
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(141, 24, 61, 0.15);
+}
+
+
+/* APRESENTAÇÃO PRINCIPAL */
+
+.hero {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+
+    overflow: hidden;
+
+    min-height: 440px;
+
+    padding: 55px 9%;
+
+    background:
+        radial-gradient(
+            circle at 80% 35%,
+            #ffd4e0 0,
+            transparent 40%
+        ),
+        linear-gradient(
+            120deg,
+            #fff7f8,
+            #ffe4ec
+        );
+
+    border-bottom: 5px solid white;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            rgba(239, 139, 166, 0.06) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(239, 139, 166, 0.06) 75%
+        );
+
+    background-size: 32px 32px;
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 1;
+
+    max-width: 520px;
+}
+
+.etiqueta {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--vinho);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    color: var(--vinho);
+
+    font-family: 'Parisienne', cursive;
+    font-size: clamp(45px, 5vw, 68px);
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    max-width: 320px;
+    margin: 18px 0;
+
+    color: var(--vinho);
+    font-size: 25px;
+}
+
+.separador span {
+    flex: 1;
+    height: 1px;
+
+    background-color: var(--rosa);
+}
+
+.hero-conteudo > p {
+    max-width: 420px;
+    margin-bottom: 25px;
+
+    color: var(--texto);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ILUSTRAÇÃO DO BOLO DE POTE */
+
+.hero-decoracao {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 310px;
+}
+
+.pote {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 190px;
+    height: 235px;
+
+    overflow: hidden;
+
+    border: 5px solid rgba(255, 255, 255, 0.95);
+    border-top: 9px solid white;
+    border-radius: 20px 20px 35px 35px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    transform: rotate(3deg);
+
+    box-shadow:
+        0 20px 35px rgba(117, 27, 56, 0.15),
+        inset 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+.pote-tampa {
+    position: absolute;
+    top: -8px;
+    left: -5px;
+    right: -5px;
+
+    height: 22px;
+
+    border: 2px solid white;
+    border-radius: 8px;
+
+    background: #f8c7d7;
+
+    z-index: 2;
+}
+
+.pote-camada {
+    width: 100%;
+}
+
+.camada-1 {
+    height: 20%;
+    background: #f7d9a8;
+}
+
+.camada-2 {
+    height: 29%;
+    background: #f3b5c8;
+}
+
+.camada-3 {
+    height: 22%;
+    background: #75402f;
+}
+
+.camada-4 {
+    height: 29%;
+    background: #e4a2b6;
+}
+
+.hero-decoracao > p {
+    margin-top: 25px;
+
+    color: var(--vinho);
+    font-family: 'Parisienne', cursive;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.coracao {
+    position: absolute;
+
+    color: var(--vinho);
+    font-size: 40px;
+}
+
+.coracao-1 {
+    top: 20px;
+    left: 18%;
+    transform: rotate(-15deg);
+}
+
+.coracao-2 {
+    top: 60px;
+    right: 15%;
+    transform: rotate(15deg);
+}
+
+
+/* TÍTULOS DAS SEÇÕES */
+
+.titulo-secao {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.titulo-secao > span {
+    color: var(--vinho);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.titulo-secao h2 {
+    margin: 7px 0;
+
+    color: var(--vinho);
+    font-family: 'Parisienne', cursive;
+    font-size: 49px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.titulo-secao p {
+    margin-top: 8px;
+
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+
+/* CARDÁPIO */
+
+.cardapio {
+    padding: 60px 7%;
+    background-color: #fffafb;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.produto {
+    overflow: hidden;
+
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+
+    background-color: white;
+
+    box-shadow: 0 8px 20px rgba(141, 24, 61, 0.06);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(141, 24, 61, 0.12);
+}
+
+
+/* ÁREA VISUAL DOS PRODUTOS */
+
+.produto-foto {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 175px;
+    overflow: hidden;
+
+    border-bottom: 1px solid var(--borda);
+}
+
+.produto-foto::before,
+.produto-foto::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.produto-foto::before {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 50%
+        ),
+        linear-gradient(
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 50%
+        );
+
+    background-size: 28px 28px;
+}
+
+.foto-ninho {
+    background-color: #f7e5c9;
+}
+
+.foto-sensacao {
+    background-color: #f5c1d2;
+}
+
+.foto-chocolate {
+    background-color: #d8b09b;
+}
+
+.foto-prestigio {
+    background-color: #f0dfd1;
+}
+
+.produto-emoji {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    place-items: center;
+
+    width: 115px;
+    height: 115px;
+
+    border: 5px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.5);
+
+    font-size: 53px;
+
+    box-shadow: 0 8px 20px rgba(105, 37, 59, 0.08);
+}
+
+.foto-legenda {
+    position: absolute;
+    z-index: 2;
+
+    bottom: 10px;
+    left: 50%;
+
+    width: max-content;
+    max-width: 90%;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--vinho);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    transform: translateX(-50%);
+}
+
+
+/* INFORMAÇÕES DOS PRODUTOS */
+
+.produto-info {
+    padding: 20px;
+}
+
+.produto-info h3 {
+    color: var(--vinho);
+
+    font-family: 'Parisienne', cursive;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.produto-info > p {
+    min-height: 65px;
+    margin-top: 8px;
+
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.produto-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    margin-top: 18px;
+    padding-top: 14px;
+
+    border-top: 1px dashed var(--borda);
+}
+
+.produto-rodape strong {
+    color: var(--vinho);
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+.botao-pedir {
+    padding: 9px 14px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: var(--rosa);
+    color: white;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.botao-pedir:hover {
+    background-color: var(--vinho);
+}
+
+
+/* SOBRE A LOJA */
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+
+    margin: 0 7%;
+    padding: 60px 5%;
+
+    border: 1px solid var(--borda);
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffe1eb,
+            #fff5f8
+        );
+}
+
+.sobre-selo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 145px;
+    height: 145px;
+
+    border: 2px solid var(--rosa);
+    border-radius: 50%;
+
+    background-color: white;
+
+    color: var(--rosa);
+    font-size: 28px;
+}
+
+.sobre-selo span {
+    color: var(--vinho);
+    font-family: 'Parisienne', cursive;
+    font-size: 44px;
+}
+
+.sobre-conteudo {
+    max-width: 550px;
+}
+
+.sobre-conteudo > span {
+    color: var(--vinho);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sobre h2 {
+    margin: 10px 0;
+
+    color: var(--vinho);
+    font-family: 'Parisienne', cursive;
+    font-size: 39px;
+    font-weight: 400;
+}
+
+.sobre p {
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.link-cardapio {
+    display: inline-block;
+
+    margin-top: 16px;
+
+    color: var(--vinho);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.link-cardapio:hover {
+    color: var(--rosa);
+}
+
+
+/* CONTATO */
+
+.contato {
+    padding: 70px 7%;
+    text-align: center;
+}
+
+.botao-whatsapp {
+    margin-top: 5px;
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 25px 7%;
+
+    border-top: 2px solid var(--borda);
+    color: var(--vinho);
+}
+
+.rodape-marca {
+    font-family: 'Parisienne', cursive;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.rodape p {
+    font-size: 13px;
+}
+
+.voltar-topo {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.voltar-topo:hover {
+    color: var(--rosa);
+}
+
+
+/* RESPONSIVIDADE: TABLETS */
+
+@media (max-width: 1050px) {
+
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navegacao {
+        gap: 18px;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        padding: 50px 7%;
+    }
+
+}
+
+
+/* RESPONSIVIDADE: CELULARES */
+
+@media (max-width: 650px) {
+
+    html {
+        scroll-padding-top: 170px;
+    }
+
+    .cabecalho {
+        position: relative;
+
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 18px 15px;
+    }
+
+    .marca {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 95px;
+        height: 95px;
+    }
+
+    .marca-texto strong {
+        font-size: 32px;
+    }
+
+    .navegacao {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .navegacao a {
+        font-size: 13px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        padding: 45px 7% 35px;
+
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 53px;
+    }
+
+    .separador {
+        margin: 18px auto;
+    }
+
+    .hero-conteudo > p {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .hero-decoracao {
+        min-height: 300px;
+    }
+
+    .coracao-1 {
+        left: 15%;
+    }
+
+    .coracao-2 {
+        right: 15%;
+    }
+
+    .cardapio {
+        padding: 45px 5%;
+    }
+
+    .titulo-secao h2 {
+        font-size: 42px;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .produto-foto {
+        min-height: 210px;
+    }
+
+    .produto-emoji {
+        width: 125px;
+        height: 125px;
+    }
+
+    .produto-info {
+        padding: 20px;
+    }
+
+    .produto-info > p {
+        min-height: 0;
+    }
+
+    .produto-rodape strong {
+        font-size: 19px;
+    }
+
+    .sobre {
+        flex-direction: column;
+        gap: 25px;
+
+        margin: 0 5%;
+        padding: 35px 23px;
+
+        text-align: center;
+    }
+
+    .sobre-selo {
+        width: 125px;
+        height: 125px;
+    }
+
+    .sobre h2 {
+        font-size: 35px;
+    }
+
+    .contato {
+        padding: 50px 6%;
+    }
+
+    .rodape {
+        flex-direction: column;
+        gap: 10px;
+
+        padding: 25px 15px;
+
+        text-align: center;
+    }
+
+}

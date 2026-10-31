@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Conheça os bolos de pote da Delícias da KV. Escolha seu sabor favorito e faça seu pedido!"
+    >
+
+    <title>Delícias da KV | Bolos de Pote</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho" id="inicio">
+
+        <a href="#inicio" class="marca">
+            <img
+                src="imagens/logo.jpeg"
+                alt="Logo Delícias da KV"
+                class="logo"
+            >
+
+            <span class="marca-texto">
+                <strong>Delícias da KV</strong>
+                <small>Bolos de pote feitos com amor</small>
+            </span>
+        </a>
+
+        <nav class="navegacao">
+            <a href="#inicio">Início</a>
+            <a href="#sabores">Sabores</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a href="#sabores" class="botao botao-cabecalho">
+            Ver cardápio
+        </a>
+
+    </header>
+
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="hero">
+
+            <div class="hero-conteudo">
+
+                <span class="etiqueta">
+                    FEITO COM CARINHO 💗
+                </span>
+
+                <h1>
+                    Bolos de pote
+                    <span>feitos com amor</span>
+                </h1>
+
+                <div class="separador">
+                    <span></span>
+                    ♡
+                    <span></span>
+                </div>
+
+                <p>
+                    Doces, cremosos e irresistíveis!
+                    Escolha seu sabor favorito e adoce
+                    seus momentos com a Delícias da KV.
+                </p>
+
+                <a href="#sabores" class="botao">
+                    Conheça nossos sabores
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+            <div class="hero-decoracao" aria-label="Bolo de pote ilustrativo">
+
+                <div class="pote">
+                    <div class="pote-tampa"></div>
+                    <div class="pote-camada camada-1"></div>
+                    <div class="pote-camada camada-2"></div>
+                    <div class="pote-camada camada-3"></div>
+                    <div class="pote-camada camada-4"></div>
+                </div>
+
+                <span class="coracao coracao-1">♡</span>
+                <span class="coracao coracao-2">♡</span>
+
+                <p>Uma colherada de felicidade!</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CARDÁPIO -->
+        <section class="cardapio" id="sabores">
+
+            <div class="titulo-secao">
+
+                <span>NOSSAS DELÍCIAS</span>
+
+                <h2>Nosso cardápio</h2>
+
+                <p>
+                    Escolha o seu favorito e venha adoçar o seu dia!
+                </p>
+
+            </div>
+
+
+            <div class="produtos">
+
+                <!-- NINHO -->
+                <article class="produto">
+
+                    <div class="produto-foto foto-ninho">
+                        <span class="produto-emoji" aria-hidden="true">🥛</span>
+                        <span class="foto-legenda">Doce e cremoso</span>
+                    </div>
+
+                    <div class="produto-info">
+
+                        <h3>Ninho</h3>
+
+                        <p>
+                            Uma opção cremosa e deliciosa
+                            para quem ama leite em pó.
+                        </p>
+
+                        <div class="produto-rodape">
+
+                            <strong>R$ 14,00</strong>
+
+                            <button
+                                type="button"
+                                class="botao-pedir"
+                                onclick="pedir('Ninho', 14)"
+                            >
+                                Pedir
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SENSACAO -->
+                <article class="produto">
+
+                    <div class="produto-foto foto-sensacao">
+                        <span class="produto-emoji" aria-hidden="true">🍓</span>
+                        <span class="foto-legenda">Uma combinação especial</span>
+                    </div>
+
+                    <div class="produto-info">
+
+                        <h3>Sensação</h3>
+
+                        <p>
+                            A combinação deliciosa de
+                            chocolate com morango.
+                        </p>
+
+                        <div class="produto-rodape">
+
+                            <strong>R$ 14,00</strong>
+
+                            <button
+                                type="button"
+                                class="botao-pedir"
+                                onclick="pedir('Sensação', 14)"
+                            >
+                                Pedir
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CHOCOLATE -->
+                <article class="produto">
+
+                    <div class="produto-foto foto-chocolate">
+                        <span class="produto-emoji" aria-hidden="true">🍫</span>
+                        <span class="foto-legenda">Para os chocólatras</span>
+                    </div>
+
+                    <div class="produto-info">
+
+                        <h3>Chocolate</h3>
+
+                        <p>
+                            Uma delícia para quem
+                            não dispensa chocolate.
+                        </p>
+
+                        <div class="produto-rodape">
+
+                            <strong>R$ 13,00</strong>
+
+                            <button
+                                type="button"
+                                class="botao-pedir"
+                                onclick="pedir('Chocolate', 13)"
+                            >
+                                Pedir
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRESTIGIO -->
+                <article class="produto">
+
+                    <div class="produto-foto foto-prestigio">
+                        <span class="produto-emoji" aria-hidden="true">🥥</span>
+                        <span class="foto-legenda">Chocolate e coco</span>
+                    </div>
+
+                    <div class="produto-info">
+
+                        <h3>Prestígio</h3>
+
+                        <p>
+                            A mistura irresistível
+                            de chocolate com coco.
+                        </p>
+
+                        <div class="produto-rodape">
+
+                            <strong>R$ 13,00</strong>
+
+                            <button
+                                type="button"
+                                class="botao-pedir"
+                                onclick="pedir('Prestígio', 13)"
+                            >
+                                Pedir
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE A LOJA -->
+        <section class="sobre" id="sobre">
+
+            <div class="sobre-selo">
+                ♡
+                <span>KV</span>
+            </div>
+
+            <div class="sobre-conteudo">
+
+                <span>NOSSO CARINHO EM CADA POTE</span>
+
+                <h2>Uma dose extra de doçura!</h2>
+
+                <p>
+                    Na Delícias da KV, cada sabor é um convite
+                    para aproveitar os pequenos momentos
+                    e transformar o dia em algo especial.
+                </p>
+
+                <a href="#sabores" class="link-cardapio">
+                    Descubra nossos sabores →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTATO -->
+        <section class="contato" id="contato">
+
+            <div class="titulo-secao">
+
+                <span>VAMOS ADOÇAR SEU DIA?</span>
+
+                <h2>Faça seu pedido!</h2>
+
+                <p>
+                    Escolha seu bolo de pote favorito
+                    e entre em contato com a loja.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="botao botao-whatsapp"
+                onclick="abrirWhatsApp()"
+            >
+                Pedir pelo WhatsApp
+                <span aria-hidden="true">♡</span>
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <a href="#inicio" class="rodape-marca">
+            Delícias da KV
+        </a>
+
+        <p>Bolos de pote feitos com amor ♡</p>
+
+        <a href="#inicio" class="voltar-topo">
+            Voltar ao início ↑
+        </a>
+
+    </footer>
+
+
+    <!-- PEDIDOS PELO WHATSAPP -->
+    <script>
+
+        /*
+          IMPORTANTE:
+          Substitua o número abaixo pelo WhatsApp da loja.
+          Use o código do país e o DDD, somente com números.
+
+          Exemplo fictício: 5521999999999
+        */
+
+        const telefoneLoja = "5521988782945";
+
+
+        function enviarWhatsApp(mensagem) {
+
+            if (telefoneLoja === "NUMERO_DA_LOJA") {
+
+                alert(
+                    "O site está funcionando! " +
+                    "Falta configurar o número do WhatsApp da loja."
+                );
+
+                return;
+            }
+
+            const telefoneValido = /^\d{12,13}$/.test(telefoneLoja);
+
+            if (!telefoneValido) {
+
+                alert(
+                    "Confira o número do WhatsApp configurado no site."
+                );
+
+                return;
+            }
+
+            const mensagemCodificada = encodeURIComponent(mensagem);
+
+            const endereco =
+                "https://wa.me/" +
+                telefoneLoja +
+                "?text=" +
+                mensagemCodificada;
+
+            window.open(endereco, "_blank", "noopener,noreferrer");
+
+        }
+
+
+        function pedir(sabor, preco) {
+
+            const valor = preco.toFixed(2).replace(".", ",");
+
+            const mensagem =
+                `Olá! Vim pelo site da Delícias da KV e gostaria ` +
+                `de pedir um bolo de pote de ${sabor}, no valor ` +
+                `de R$ ${valor}.`;
+
+            enviarWhatsApp(mensagem);
+
+        }
+
+
+        function abrirWhatsApp() {
+
+            const mensagem =
+                "Olá! Vim pelo site da Delícias da KV e gostaria " +
+                "de conhecer os bolos de pote disponíveis.";
+
+            enviarWhatsApp(mensagem);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
